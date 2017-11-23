@@ -1,0 +1,45 @@
+{
+  "name": "react-feathersjs",
+  "version": "0.1.0",
+  "description": "React bindings for FeatherJS",
+  "main": "lib/",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel -d lib/ src/"
+  },
+  "keywords": [
+    "feathersjs",
+    "react",
+    "reactjs",
+    "reactnative",
+    "api",
+    "isomorphic"
+  ],
+  "author": "Steven Scaffidi <sscaff1@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/sscaff1/react-feathersjs",
+  "bugs": {
+    "url": "https://github.com/sscaff1/react-feathersjs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sscaff1/react-feathersjs"
+  },
+  "dependencies": {
+    "@feathersjs/authentication-client": "^1.0.1",
+    "@feathersjs/feathers": "^3.0.1",
+    "@feathersjs/rest-client": "^1.3.2",
+    "@feathersjs/socketio-client": "^1.0.1",
+    "react": "^16.1.1",
+    "prop-types": "^15.6.0",
+    "socket.io-client": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1"
+  },
+  "peerDependencies": {
+    "react": "^16.1.1"
+  }
+}
