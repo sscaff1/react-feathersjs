@@ -1,9 +1,11 @@
 import { Children, PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import feathers from '@feathersjs/feathers';
+
+import feathers from '@feathersjs/client';
 import socketio from '@feathersjs/socketio-client';
 import authentication from '@feathersjs/authentication-client';
 import io from 'socket.io-client';
+import rx from 'feathers-reactive';
 import { feathersWrapperPropTypes, feathersWrapperDefaultProps } from './types';
 
 export default class FeathersProvider extends PureComponent {
@@ -27,6 +29,7 @@ export default class FeathersProvider extends PureComponent {
     this._timeout = null;
     this.app = feathers()
       .configure(socketio(socket, props.feathersSocketioOptions))
+      .configure(rx({ idField: props.idField }))
       .configure(authentication(props.feathersAuthOptions));
   }
 
