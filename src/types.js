@@ -270,6 +270,7 @@ export const feathersWrapperPropTypes = {
   connectionCallbacks: PropTypes.shape(connectionCallbacksShape),
   feathersSocketioOptions: PropTypes.shape(feathersSocketioOptionsShape),
   feathersAuthOptions: PropTypes.shape(feathersAuthOptionsShape),
+  idField: PropTypes.string
 };
 
 export const feathersWrapperDefaultProps = {
@@ -282,4 +283,5 @@ export const feathersWrapperDefaultProps = {
   connectionCallbacks: {},
   // default props found in the package
   authOptionsShape: {},
+  idField: "id"
 };
