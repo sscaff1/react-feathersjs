@@ -28,7 +28,7 @@ import App from './src';
 
 render(
   <FeathersProvider>
-    <App>
+    <App/>
   </FeathersProvider>,
   document.getElementById('app')
 );
@@ -59,12 +59,12 @@ export default connectFeathers(App);
 
 See /src/types.js for the props provided. Essentially what this does though is
 connect to a feathers back-end and then pass the feathers object through context
-to it's children.
+to its children.
 
 ### connectFeathers
 
-A HOF that accepts a wrapped component as it's first parameter and an options
-object as it's second parameter. Currently, the only key in the options object
+A HOF that accepts a wrapped component as its first parameter and an options
+object as its second parameter. Currently, the only key in the options object
 is withRef which provides a ref for the wrapped component (this option is false
 by default). If you need to access the wrapped component then use the method
 getWrappedInstance().
